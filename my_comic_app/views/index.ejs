@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+<div id="container">
+	<% for (var i = 0; i < user.length; i++) { %>
+		<h1> <%= user[i].name %> <h1>
+		<h2> My titles: <h2>
+			<%	for (var j = 0; j < user[i].comics.length; j++) { %>
+				<h3> <%= user[i].comics[j] %> <h3>
+		<% } %>
+	<% } %>
+</div>
+</body>
+</html>

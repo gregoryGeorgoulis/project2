@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<h1>Edit Da user</h1>
+	<form action="/users/<%= user.id %>" method="POST">
+		<input type="text" name="name" placeholder="name" value="<%= user.name %>"/>
+		<br>
+		<input type="text" name="comics" placeholder="comics" value="<%= user.comics %>"/>
+		<br>
+		<input type="text" name="comics" placeholder="comics" value="<%= user.comics %>"/>
+		<br>
+		<input type="text" name="comics" placeholder="comics" value="<%= user.comics %>"/>
+		<br>
+		<input type="text" name="comics" placeholder="comics" value="<%= user.comics %>"/>
+		<br>
+		<input type="text" name="comics" placeholder="comics" value="<%= user.comics %>"/>
+		<br>
+		<input type="text" name="comics" placeholder="comics" value="<%= user.comics %>"/>
+		<br>
+		<input type="hidden" name="_method" value="PUT"/>
+		<br>
+		<button>submit</button>
+	</form>
+</body>
+</html>
