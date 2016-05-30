@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/styles1.css">
+	<link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+</head>
+	<% include ../views/partials/header.ejs %>
+<body>
+	<div>
+		<h2><%= myData.data.results[0].series.name%></h2>
+		<img src= <%=myData.data.results[0].thumbnail.path + "/portrait_incredible.jpg"%> >
+		<%	for (var i = 0; i < 4; i++) { %>
+		 	<p class="comic"><b>Title:</b> <%= myData.data.results[i].title %> </p>	
+		 	<p class="date"><b>Date:</b><%= myData.data.results[i].dates[0].date %> </p>
+		<% } %>
+
+		<p><b>Price:</b><%= myData.data.results[0].prices[0].price%></p>
+		<p><b><%= myData.data.results[0].creators.items[0].role%>:</b><%= myData.data.results[0].creators.items[0].name%></p>
+		<p><b><%= myData.data.results[0].creators.items[1].role%>:</b><%= myData.data.results[0].creators.items[1].name%></p>	
+	</div>
+	<br>
+
+</body>
+<a href=<%= myData.data.results[0].urls[0].url %>>Marvel.com</a>
+ <p>"Data provided by Marvel. © 2014 Marvel"</p>
+</html>
+
+ 	
+		 	

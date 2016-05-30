@@ -1,0 +1,73 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Sigmar One', cursive;
+}
+header{
+	text-align: center;
+	height: 5rem;
+	background-color: red;
+}
+h1{
+	font-size: 170%;
+	color:white;
+}
+li{
+	margin-left: 1rem;
+	list-style: none;
+	color: red;
+	font-size: 1rem;
+}
+nav{
+	text-align: center;
+	padding: 2%;
+	height: 1rem;
+	background-color: rgba(200,0,0, .1);
+}
+a{
+	display: inline-block;
+}
+#name{
+	font-size: 1.8rem;
+	color: gold;
+	text-shadow: 2px 2px black;
+}
+#my{
+	color: gold;
+	text-shadow: 2px 2px black;
+	font-size: 1.2rem;
+}
+
+.titles{
+	color: #ECEFF1;
+	display: block;
+	font-weight: bold;
+	text-shadow: 2px 2px black;
+	font-size: 1.2rem;
+}
+body{
+	background-color: black;
+	color: white;
+	text-align: center;
+	
+}
+#container{
+	height: 40rem;
+	text-align: center;
+	padding: 1%;
+	background-image: url('../images/marvel3.jpg');
+	background-size: cover;
+	background-position: center;
+	
+}
+@media(min-width: 750px){
+	li{
+	list-style: none;
+	color: red;
+	font-size: 1.5rem;
+}
+h1{
+	font-size: 300%;
+	color:white;
+}
+}

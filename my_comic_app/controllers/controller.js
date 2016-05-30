@@ -30,24 +30,9 @@ router.get('/:comic_id',function(req,res){
 	var comic_id = comic_id.replace(' ', '%20');
 	var data;
 	request("http://gateway.marvel.com/v1/public/comics?title=" + comic_id + "&ts="+ ts + "&apikey=" + publicKey + "&hash=" + md5(ts+privateKey+publicKey)
-		,function(error,response,body){
-			
+		,function(error,response,body){	
 			var myData = JSON.parse(body);
-		 	console.log("===========")
-		 	for (var i = 0; i < myData.data.results.length; i++) {
-		 	console.log(myData.data.results[i].title);	
-		 	console.log(myData.data.results[i].dates[0].date);
-		 	}
-		 	
-
-		 	console.log(myData.data.results[0].prices[0].price);
-		 	console.log(myData.data.results[0].creators.items[0].name);
-		 	console.log(myData.data.results[0].creators.items[0].role);
-		 	console.log(myData.data.results[0].creators.items[1].name);
-		 	console.log(myData.data.results[0].creators.items[1].role);
-		 	console.log("===========");		
-		 	console.log(myData);
-			res.json(myData); 
+			res.render('show.ejs', {myData}); 
 	 });		
 });
 
@@ -67,7 +52,7 @@ router.put('/:id',function(req,res){
 			function(user){
 				console.log(user);
 			});
-	res.redirect('/users/' + req.params.id);
+	res.redirect('/users');
 });
 
 //create 
@@ -86,8 +71,7 @@ router.post('/',function(req,res){
 router.delete('/:id',function(req,res){
 	User.findOneAndRemove({_id:req.params.id},
 		function(user){
-				res.redirect('/users/');
-			
+			res.redirect('/users/');
 		});
 });
 
@@ -101,5 +85,19 @@ module.exports = router;
 // 	console.log('this is hash ' + md5(ts+privateKey+publicKey));
 // 	console.log('-------------------');
 
-
-
+// console.log(myData.data.results[0].prices[0].price);
+// console.log(myData.data.results[0].creators.items[0].name);
+// console.log(myData.data.results[0].creators.items[0].role);
+// console.log(myData.data.results[0].creators.items[1].name);
+// console.log(myData.data.results[0].creators.items[1].role);
+ 	// for (var i = 0; i < myData.data.results.length; i++) {
+		 	// console.log(myData.data.results[i].title);	
+		 	// console.log(myData.data.results[i].dates[0].date);
+		 	// }
+ 	// console.log(myData);
+ 	 	// console.log("===========")
+		 	// var myDate = myData.data.results[0].dates[0].date;
+		 	// var newDate = Date.parse(myDate);
+		 	// console.log(newDate.toLocaleFormat());
+		 	 	// console.log('new date = ' + myDate.toDateString());		 	
+		 	// console.log("===========");

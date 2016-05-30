@@ -1,0 +1,61 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Sigmar One', cursive;
+
+}
+header{
+	text-align: center;
+	height: 5rem;
+	background-color: red;
+	color:white;
+}
+h1{
+	font-size: 150%;
+	color:white;
+}
+h2{
+	font-size: 100%;
+}
+li{
+	margin-left: 1rem;
+	list-style: none;
+	color: red;
+
+}
+nav{
+	text-align: center;
+	padding: 2%;
+	height: 1rem;
+	background-color: rgba(70, 70, 70, .7);
+}
+a{
+	display: inline-block;
+}
+img{
+	width: 30%;
+	height: auto;
+}
+body{
+	font-size: .8rem;
+	height: 50rem;
+	background-color: black;
+	color: white;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@media(min-width: 750px){
+	body{
+		font-size: 1.2rem;
+	}
+	li{
+	list-style: none;
+	color: red;
+	font-size: 1.5rem;
+	}
+	h1{
+	font-size: 200%;
+	color:white;
+	}
+}
