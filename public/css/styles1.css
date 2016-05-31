@@ -25,9 +25,7 @@ li{
 	font-size: 1.2rem;
 
 }
-ul{
 
-}
 nav{
 	text-align: center;
 	padding: 3%;
@@ -36,20 +34,23 @@ nav{
 }
 a{
 	display: inline-block;
-	
+
 }
 img{
 	width: 30%;
 	height: auto;
 }
 body{
-	font-size: 2rem;
 	height: 50rem;
 	background-color: black;
 	color: white;
 	text-align: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+#hide{
+	font-size: .5rem;
+visibility: hidden;
 }
 @media(min-width: 750px){
 	body{

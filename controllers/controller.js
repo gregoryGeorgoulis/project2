@@ -6,7 +6,7 @@ var ts = Date.now();
 var md5 = require('md5');
 var publicKey = process.env.PUBLIC_KEY;
 var privateKey = process.env.PRIVATE_KEY;
-
+var dateFormat = require('dateformat');
 
 
 
@@ -32,7 +32,10 @@ router.get('/:comic_id',function(req,res){
 	request("http://gateway.marvel.com/v1/public/comics?title=" + comic_id + "&ts="+ ts + "&apikey=" + publicKey + "&hash=" + md5(ts+privateKey+publicKey)
 		,function(error,response,body){	
 			var myData = JSON.parse(body);
-			res.render('show.ejs', {myData}); 
+			var newTime = function(date){
+				return dateFormat(date, "fullDate");
+			};
+			res.render('show.ejs', {myData: myData, newTime: newTime}); 
 	 });		
 });
 

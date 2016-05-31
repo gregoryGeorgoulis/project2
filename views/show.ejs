@@ -3,6 +3,7 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="../css/styles1.css">
 	<link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 	<% include ../views/partials/header.ejs %>
 <body>
@@ -10,8 +11,9 @@
 		<h2><%= myData.data.results[0].series.name%></h2>
 		<img src= <%=myData.data.results[0].thumbnail.path + "/portrait_incredible.jpg"%> >
 		<%	for (var i = 0; i < 4; i++) { %>
-		 	<p class="comic"><b>Title: </b> <%= myData.data.results[i].title %> </p>	
-		 	<p class="date"><b>Date: </b><%= myData.data.results[i].dates[0].date %> </p>
+		 	<p class="comic"><b>Title: </b> <%= myData.data.results[i].title %> </p> 
+		 	<p class="date"><b>Date: </b><%= newTime(myData.data.results[i].dates[0].date)%> </p>
+		 	<br>
 		<% } %>
 
 		<p><b>Price:</b><%= myData.data.results[0].prices[0].price%></p>
