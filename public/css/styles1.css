@@ -18,26 +18,32 @@ h2{
 	font-size: 100%;
 }
 li{
+	
 	margin-left: 1rem;
 	list-style: none;
 	color: red;
+	font-size: 1.2rem;
+
+}
+ul{
 
 }
 nav{
 	text-align: center;
-	padding: 2%;
+	padding: 3%;
 	height: 1rem;
 	background-color: rgba(70, 70, 70, .7);
 }
 a{
 	display: inline-block;
+	
 }
 img{
 	width: 30%;
 	height: auto;
 }
 body{
-	font-size: .8rem;
+	font-size: 2rem;
 	height: 50rem;
 	background-color: black;
 	color: white;
