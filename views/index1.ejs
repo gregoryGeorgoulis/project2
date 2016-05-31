@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% include ../views/partials/head.ejs %>
+</head>
+<% include ../views/partials/header.ejs %>
+<body>
+<div id="container">
+	<% for (var i = 0; i < user.length; i++) { %>
+		<a id="name" href="/users/<%=user[i].id%>/edit"><p><b> <%= user[i].name %></b></p></a>	
+			<p id="my"><b> My titles:</b> </p>
+			<%	for (var j = 0; j < user[i].comics.length; j++) { %>
+			 <a class="titles" href="/users/<%= user[i].comics[j] %>" > <p><%= user[i].comics[j] %> </p></a>
+		<% } %>	
+	<% } %>	
+</div>	 
+</body>
+</html>

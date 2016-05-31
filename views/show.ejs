@@ -10,8 +10,8 @@
 		<h2><%= myData.data.results[0].series.name%></h2>
 		<img src= <%=myData.data.results[0].thumbnail.path + "/portrait_incredible.jpg"%> >
 		<%	for (var i = 0; i < 4; i++) { %>
-		 	<p class="comic"><b>Title:</b> <%= myData.data.results[i].title %> </p>	
-		 	<p class="date"><b>Date:</b><%= myData.data.results[i].dates[0].date %> </p>
+		 	<p class="comic"><b>Title: </b> <%= myData.data.results[i].title %> </p>	
+		 	<p class="date"><b>Date: </b><%= myData.data.results[i].dates[0].date %> </p>
 		<% } %>
 
 		<p><b>Price:</b><%= myData.data.results[0].prices[0].price%></p>
