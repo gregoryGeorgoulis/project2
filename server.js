@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 var ejs = require('ejs');
 var md5 = require('md5');
 var request = require('request');
-var db = process.env.MONGODB_URI || "mongodb://localhost/marvel";
+var mongoUri = process.env.MONGODB_URI || "mongodb://localhost/marvel";
 var port = process.env.PORT || 3000;
 require('events').EventEmitter.prototype_maxlistener = 0;
 
@@ -28,7 +28,7 @@ app.use(methodOverride(function(req, res){
 
 
 //database
-mongoose.connect(db);
+mongoose.connect(mongoUri);
 
 //controllers 
 var userController = require('./controllers/controller.js');
